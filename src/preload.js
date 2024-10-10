@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function notify(job) {
         return new Notification(job.title, {
-            body: `📅  ${job.posted_at}\n✍️  Proposal ${job.proposal}\n🚩${job.country}\t ★✰  ${job.rating}\n💶  ${job.price}\n ${job.detail}`
+            body: `📅  ${job.posted_at}\n✍️  Proposal ${job.proposal}\n🌐 ${job.country}\t ★✰  ${job.rating}\n💶  ${job.price}\n ${job.detail}`
         });
     }
 
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function load_page_by_scroll() {
 
-        let jobs_placeholders = document.querySelectorAll('[data-test="job-tile-list"] > [data-test="job-tile-list"]');
+        let jobs_placeholders = document.querySelectorAll('[data-test="job-tile-list"] > [data-test="job-tile-placeholder"]');
 
         if (jobs_placeholders.length == 0) {
             console.log("processing jobs");
